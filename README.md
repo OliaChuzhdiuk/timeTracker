@@ -83,15 +83,6 @@ cd backend
 npm install
 ```
 
-### Environment variables
-
-Create a `.env` file in `backend/`:
-
-```
-DATABASE_URL="file:./dev.db"
-PORT=4000
-```
-
 ### Setup Database
 
 ```bash
@@ -128,48 +119,5 @@ Create a `.env` file in `frontend/`:
 ```
 VITE_API_URL=http://localhost:4000
 ```
-
-### Start Frontend
-
-```bash
-npm run dev
-```
-
-Open in browser:
-
-```
-http://localhost:5173
-```
-
----
-
-## 🔌 API Endpoints
-
-| Method | Endpoint       | Description          |
-| ------ | -------------- | -------------------- |
-| GET    | `/api/entries` | Get all time entries |
-| POST   | `/api/entries` | Create a new entry   |
-
----
-
-## 🧠 Architecture Overview
-
-The project follows a **separation of concerns** principle:
-
-### Frontend
-
-* `components/` — Reusable UI components (Form, EntryList, Totals)
-* `api/` — API communication layer
-* `types/` — Shared TypeScript interfaces
-
-### Backend
-
-* `routes/` — Express route handlers
-* `prisma/` — Database schema & migrations
-* `server.ts` — App bootstrap and middleware setup
-
-The frontend communicates with the backend via REST API. The backend uses Prisma ORM to interact with a relational database.
-
----
 
 
